@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# FlagTastic
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fun and interactive app designed to enhance the language-switching experience through engaging activities and vibrant flags. Utilizing i18n libraries, Material UI, and Tailwind CSS, FlagTastic provides a seamless interface for users to explore multiple languages.
 
-## Available Scripts
+## Features to be included
 
-In the project directory, you can run:
+- **Language Flags**: Visual representation of available languages for easy identification.
+- **Text Preview Area**: Users can input text and see real-time translations, helping them understand the language switch.
+- **Language Switch Animation**: Smooth animations enhance the user experience when changing languages.
+- **Themed Backgrounds**: Backgrounds that change based on the selected language, adding a dynamic visual element.
 
-### `npm start`
+i18n libraries are used for the language swich feature along with material ui and tailwind css for ui.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Steps to use i18n for language switch feature
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Installation
+Begin by installing the necessary dependencies using npm:
 
-### `npm test`
+```bash
+npm install i18next react-i18next
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Project Structure
+Create a dedicated folder for i18n in the src directory to keep your language files organized:
 
-### `npm run build`
+src/
+├── i18n/
+│   ├── en.json
+│   ├── my.json
+│   ├── ko.json
+│   └── index.js (Initialize here)
+└── ...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Configure i18n
+a. Import the i18n Configuration
+In your project's index.js file, import the i18n configuration folder to initialize it:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+b. Create Language JSON Files
+Define a JSON file for each language you want to support. Each file should contain consistent keys for translations. You can check the files in my project for example.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+c. Initialize i18n Configuration
+Create an index.js file in your i18n folder to set up the i18n configuration.
+You can check the code in my i18n.js file.
 
-### `npm run eject`
+## 4. Using Translations in Components
+To utilize translations in your React components, import the useTranslation hook from react-i18next: const { t, i18n } = useTranslation();
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 5. Implement Language Switching
+Use i18n.changeLanguage(selected_language_parameter) to handle language switch.

@@ -1,0 +1,16 @@
+{
+    "appName": "VM 应用",
+    "language": "语言",
+    "login": "登录",
+    "landing": {
+      "welcomeBack": "欢迎回来！",
+      "carCare": "您的汽车值得最好的保养。"
+    },
+    "aboutUs": "关于我们",
+    "aboutUsContent": "我们致力于为您的车辆提供最好的服务。",
+    "services": "服务",
+    "servicesContent": "我们的服务范围包括维护、修理和诊断。",
+    "contact": "联系",
+    "contactContent": "如有任何疑问，请随时联系我们。"
+  }
+  

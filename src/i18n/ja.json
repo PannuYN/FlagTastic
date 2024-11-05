@@ -1,0 +1,16 @@
+{
+    "appName": "VMアプリ",
+    "language": "言語",
+    "login": "ログイン",
+    "landing": {
+      "welcomeBack": "お帰りなさい!",
+      "carCare": "あなたの車には最高のケアが必要です。"
+    },
+    "aboutUs": "私たちについて",
+    "aboutUsContent": "私たちはあなたの車に最高のサービスを提供することを約束します。",
+    "services": "サービス",
+    "servicesContent": "当社のサービスには、メンテナンス、修理、診断が含まれます。",
+    "contact": "お問い合わせ",
+    "contactContent": "ご質問がある場合は、お気軽にご連絡ください。"
+  }
+  

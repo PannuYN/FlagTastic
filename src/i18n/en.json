@@ -1,0 +1,16 @@
+{
+    "appName": "VM APP",
+    "language": "Language",
+    "login": "Login",
+    "landing": {
+      "welcomeBack": "Welcome Back!",
+      "carCare": "Your car deserves the best care — let’s keep it running smoothly together."
+    },
+    "aboutUs": "About Us",
+    "aboutUsContent": "We are committed to providing the best service for your vehicle.",
+    "services": "Services",
+    "servicesContent": "Our range of services includes maintenance, repair, and diagnostics.",
+    "contact": "Contact",
+    "contactContent": "Feel free to reach out to us for any inquiries."
+  }
+  

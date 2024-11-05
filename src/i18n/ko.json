@@ -1,0 +1,16 @@
+{
+    "appName": "VM 앱",
+    "language": "언어",
+    "login": "로그인",
+    "landing": {
+      "welcomeBack": "다시 오신 것을 환영합니다!",
+      "carCare": "당신의 자동차는 최상의 관리를 받을 자격이 있습니다."
+    },
+    "aboutUs": "회사 소개",
+    "aboutUsContent": "우리는 당신의 차량에 최고의 서비스를 제공하기 위해 노력하고 있습니다.",
+    "services": "서비스",
+    "servicesContent": "우리의 서비스 범위에는 유지 보수, 수리 및 진단이 포함됩니다.",
+    "contact": "연락처",
+    "contactContent": "문의 사항이 있으시면 언제든지 연락 주십시오."
+  }
+  
