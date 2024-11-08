@@ -1,55 +1,90 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from '@mui/icons-material/Close';
+import { AppBar, Box, Grid2, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 function Navbar() {
+  const theme = useTheme();
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('');
   const [showLangDropdown, setShowLangDropdown] = useState(false);
 
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
     setShowLangDropdown(false);
+    setCurrentLanguage(lang);
   };
 
   return (
-    <div className="shadow-lg mb-3 sticky top-0 z-10">
-      <div className="relative bg-blue-500 w-full top-0 left-0 z-50">
-        <div className="container flex items-center justify-between h-10 sm:h-14">
-          <div className="font-Ubuntu sm:text-2xl text-white">VM APP</div>
+    <div>
+      <AppBar position="static" className="bg-transparent shadow-none text-black">
+        <Toolbar className="lg:flex lg:justify-between">
+          {/* Left Section - e.g., Menu Icon */}
+          <IconButton edge="start" color="inherit" aria-label="menu" className="lg:hidden" sx={{ mr: 2 }} onClick={() => setIsOpen(prev => !prev)}>
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" color="inherit" component="div">
+            FlagTastic
+          </Typography>
 
-          {/* Center - Nav Links */}
-          <div
-            id="nav-menu"
-            className={`absolute top-0 ${isOpen ? "left-0" : "left-[-100%]"} min-h-screen w-full bg-orange-900/80 backdrop-blur-sm flex items-center justify-center duration-300 lg:static lg:min-h-fit lg:bg-transparent lg:w-auto`}
-          >
-            <ul className="flex flex-col gap-7 lg:flex-row">
-              <li className="text-white">{t('aboutUs')}</li>
-              <li className="text-white">{t('services')}</li>
-              <li className="text-white">{t('contact')}</li>
-            </ul>
+          {/* Center Section - Navigation Links */}
+          <div className="hidden sm:flex flex-grow justify-center text-lg">
+            <a className="m-2 hover:text-white">{t('aboutUs')}</a>
+            <a className="m-2 hover:text-white">{t('services')}</a>
+            <a className="m-2 hover:text-white">{t('contact')}</a>
           </div>
 
           {/* Language Dropdown container */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 z-10 right-10 fixed">
             {/* Language Dropdown */}
             <div className="relative">
-              <button onClick={() => setShowLangDropdown(!showLangDropdown)} className="text-white flex items-center">
-                {t('language')} <ArrowDropDownIcon className="ml-1" />
+              <button onClick={() => setShowLangDropdown(!showLangDropdown)} className="flex items-center bg-transparent border-none">
+                {currentLanguage || 'en'} <ArrowDropDownIcon className="ml-1" />
               </button>
               {showLangDropdown && (
-                <ul className="absolute right-0 bg-white text-black p-2 rounded shadow-md mt-2">
-                  <li onClick={() => handleLanguageChange('en')} className="hover:bg-gray-100 p-2">English</li>
-                  <li onClick={() => handleLanguageChange('my')} className="hover:bg-gray-100 p-2">Myanmar</li>
-                  <li onClick={() => handleLanguageChange('ko')} className="hover:bg-gray-100 p-2">Korean</li>
-                  <li onClick={() => handleLanguageChange('ja')} className="hover:bg-gray-100 p-2">Japanese</li>
-                  <li onClick={() => handleLanguageChange('zh')} className="hover:bg-gray-100 p-2">Chinese</li>
-                </ul>
+                <Box className="absolute right-0 list-none p-0 rounded-lg shadow-lg" sx={{ backgroundColor: theme.palette.primary.light }}>
+                  <li onClick={() => handleLanguageChange('en')} className="hover:bg-blue-300 py-2 px-4 rounded-t-lg">English</li>
+                  <li onClick={() => handleLanguageChange('my')} className="hover:bg-blue-300 py-2 px-4">Myanmar</li>
+                  <li onClick={() => handleLanguageChange('ko')} className="hover:bg-blue-300 py-2 px-4">Korean</li>
+                  <li onClick={() => handleLanguageChange('ja')} className="hover:bg-blue-300 py-2 px-4">Japanese</li>
+                  <li onClick={() => handleLanguageChange('zh')} className="hover:bg-blue-300 py-2 px-4 rounded-b-lg">Chinese</li>
+                </Box>
               )}
             </div>
           </div>
-        </div>
-      </div>
+        </Toolbar>
+        {/* Center - Nav Links */}
+        <Box
+          id="nav-menu"
+          className={`lg:hidden md:block absolute top-0 ${isOpen ? "left-0" : "left-[-100%]"} min-h-screen w-full flex items-center justify-center duration-300`
+          } sx={{
+            backdropFilter: 'blur(10px)',
+            zIndex: 9999,  // Ensure the box is above all other content
+          }}
+        >
+
+          {/* Close Button */}
+          <IconButton
+            color="inherit"
+            sx={{ position: 'absolute', top: 20, right: 20 }}
+            onClick={() => setIsOpen(false)}  // Close the menu when clicked
+          >
+            <CloseIcon />
+          </IconButton>
+
+          <ul className="flex flex-col gap-7 lg:flex-row list-none text-xl">
+            <a className="m-2 hover:text-white">{t('aboutUs')}</a>
+            <a className="m-2 hover:text-white">{t('services')}</a>
+            <a className="m-2 hover:text-white">{t('contact')}</a>
+          </ul>
+        </Box>
+
+      </AppBar>
+
     </div>
   );
 }
