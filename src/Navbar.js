@@ -7,12 +7,14 @@ import { AppBar, Box, Grid2, IconButton, Stack, Toolbar, Typography } from "@mui
 import { useTheme } from "@emotion/react";
 
 function Navbar() {
-  const theme = useTheme();
+  const theme = useTheme(); //for theme consistency
+
+  const [isOpen, setIsOpen] = useState(false); //for responsive navlink section
+
+  //for language switch
   const { t, i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('');
   const [showLangDropdown, setShowLangDropdown] = useState(false);
-
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
     setShowLangDropdown(false);
@@ -23,26 +25,29 @@ function Navbar() {
     <div>
       <AppBar position="static" className="bg-transparent shadow-none text-black">
         <Toolbar className="lg:flex lg:justify-between">
-          {/* Left Section - e.g., Menu Icon */}
-          <IconButton edge="start" color="inherit" aria-label="menu" className="lg:hidden" sx={{ mr: 2 }} onClick={() => setIsOpen(prev => !prev)}>
+
+          {/* Left Section - Home Icon and menu icon (menu icon will only appear in small screens) */}
+          <IconButton edge="start" color="inherit" aria-label="menu" className="lg:hidden hover-effect" sx={{ mr: 2 }} onClick={() => setIsOpen(prev => !prev)}>
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" color="inherit" component="div">
+          <Typography variant="h6" color="inherit" component="div" className="hover-effect">
             FlagTastic
           </Typography>
 
-          {/* Center Section - Navigation Links */}
+          {/* Center Section - Navigation Links (for large screens) */}
           <div className="hidden sm:flex flex-grow justify-center text-lg">
-            <a className="m-2 hover:text-white">{t('aboutUs')}</a>
-            <a className="m-2 hover:text-white">{t('services')}</a>
-            <a className="m-2 hover:text-white">{t('contact')}</a>
+            <a className="m-2 hover-effect hover:text-white">{t('flags')}</a>
+            <a className="m-2 hover-effect hover:text-white">{t('services')}</a>
+            <a className="m-2 hover-effect hover:text-white">{t('aboutUs')}</a>
+            <a className="m-2 hover-effect hover:text-white">{t('contact')}</a>
           </div>
 
           {/* Language Dropdown container */}
           <div className="flex items-center space-x-4 z-10 right-10 fixed">
+
             {/* Language Dropdown */}
             <div className="relative">
-              <button onClick={() => setShowLangDropdown(!showLangDropdown)} className="flex items-center bg-transparent border-none">
+              <button onClick={() => setShowLangDropdown(!showLangDropdown)} className="flex items-center bg-transparent border-none hover-effect">
                 {currentLanguage || 'en'} <ArrowDropDownIcon className="ml-1" />
               </button>
               {showLangDropdown && (
@@ -55,9 +60,13 @@ function Navbar() {
                 </Box>
               )}
             </div>
+
           </div>
+
         </Toolbar>
-        {/* Center - Nav Links */}
+
+
+        {/* Center - Nav Links (for small screens) */}
         <Box
           id="nav-menu"
           className={`lg:hidden md:block absolute top-0 ${isOpen ? "left-0" : "left-[-100%]"} min-h-screen w-full flex items-center justify-center duration-300`
@@ -76,10 +85,12 @@ function Navbar() {
             <CloseIcon />
           </IconButton>
 
+          {/* nav links */}
           <ul className="flex flex-col gap-7 lg:flex-row list-none text-xl">
-            <a className="m-2 hover:text-white">{t('aboutUs')}</a>
-            <a className="m-2 hover:text-white">{t('services')}</a>
-            <a className="m-2 hover:text-white">{t('contact')}</a>
+            <a className="m-2 hover-effect hover:text-white">{t('flags')}</a>
+            <a className="m-2 hover-effect hover:text-white">{t('services')}</a>
+            <a className="m-2 hover-effect hover:text-white">{t('aboutUs')}</a>
+            <a className="m-2 hover-effect hover:text-white">{t('contact')}</a>
           </ul>
         </Box>
 

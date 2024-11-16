@@ -9,4 +9,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  corePlugins: {
+    transform: true, // Ensure transform utilities are enabled
+  },
 }

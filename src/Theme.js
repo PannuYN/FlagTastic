@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+  //for color
   palette: {
     primary: {
       light: '#e3f2fd',
@@ -15,6 +16,7 @@ const theme = createTheme({
       contrastText: '#000',
     },
   },
+  //for typography
   typography: {
     fontFamily: 'Roboto, sans-serif',  // Set Roboto as default for MUI typography
   },

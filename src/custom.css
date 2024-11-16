@@ -1,0 +1,15 @@
+a {
+  cursor: pointer; /* Forces the hand cursor for link elements */
+}
+
+.hover-effect, .image-hover-effect {
+  transition: transform 0.3s, font-size 0.3s; /* for smooth hovering effect */
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px) scale(1.1); /* Scales the element without changing the actual font size */
+}
+
+.image-hover-effect:hover {
+  transform: scale(1.2);
+}
