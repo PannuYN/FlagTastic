@@ -1,20 +1,27 @@
 {
-    "appName": "VM APP",
-    "language": "Language",
-    "login": "Login",
-    "landing": {
-      "welcomeBack": "Welcome Back!",
-      "carCare": "Your car deserves the best care — let’s keep it running smoothly together."
-    },
-    "aboutUs": "About Us",
-    "aboutUsContent": "We are committed to providing the best service for your vehicle.",
-    "services": "Services",
-    "servicesContent": "Our range of services includes maintenance, repair, and diagnostics.",
-    "contact": "Contact",
-    "contactContent": "Feel free to reach out to us for any inquiries.",
-    "flags": "Flags",
+  "appName": "VM APP",
+  "language": "Language",
+  "login": "Login",
+  "landing": {
+    "welcomeBack": "Welcome Back!",
+    "carCare": "Your car deserves the best care — let’s keep it running smoothly together."
+  },
+  "aboutUs": "About Us",
+  "aboutUsContent": "We are committed to providing the best service for your vehicle.",
+  "services": "Services",
+  "servicesContent": "Our range of services includes maintenance, repair, and diagnostics.",
+  "contact": "Contact",
+  "contactContent": "Feel free to reach out to us for any inquiries.",
+  "flags": "Flags",
+  "welcome-title": "Welcome to Flagtastic – Your Ultimate Flag Destination!",
+  "welcome-paragraph": "At Flagtastic, we bring the world of flags to your fingertips! Whether you're looking for national flags, custom designs, or educational resources, we have everything you need to explore the rich history and vibrant symbolism behind every flag. Our collection is carefully curated to inspire curiosity and foster global connections. Join us on a journey through color, culture, and identity with Flagtastic – where every flag tells a story!",
+  "special-flag-btn": "Check out today's special flag",
 
-    "welcome-title": "Welcome to Flagtastic – Your Ultimate Flag Destination!",
-    "welcome-paragraph": "At Flagtastic, we bring the world of flags to your fingertips! Whether you're looking for national flags, custom designs, or educational resources, we have everything you need to explore the rich history and vibrant symbolism behind every flag. Our collection is carefully curated to inspire curiosity and foster global connections. Join us on a journey through color, culture, and identity with Flagtastic – where every flag tells a story!"
-  }
-  
+  "more": "Tell me more",
+  "origin-title": "Origin",
+
+  "switzerland": "SWITZERLAND",
+  "switzerland-title": "Discover the Beauty of Switzerland",
+  "switzerland-paragraph": "Switzerland is renowned for its breathtaking Alpine landscapes, pristine lakes, and charming villages. It is a hub for outdoor activities, offering year-round adventures from skiing in the winter to hiking and exploring nature trails in the summer. The country is also celebrated for its cultural diversity, delicious Swiss chocolates, and historical landmarks that beautifully merge tradition and modernity.",
+  "switzerland-origin": "The Swiss flag, a bold white cross on a red background, is one of the oldest national symbols still in use. Its origins date back to the 14th century, when Swiss soldiers carried a white cross as a sign of unity and shared purpose during the Battle of Laupen in 1339. Officially adopted in 1889, the flag symbolizes the historic struggle for freedom and the confederation's commitment to neutrality. The red field and white cross are thought to represent courage and peace, respectively. This enduring emblem reflects Switzerland's rich heritage and steadfast principles throughout history."
+}

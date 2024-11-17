@@ -1,0 +1,19 @@
+/* Define the keyframe for animating the gradient */
+@keyframes gradientAnimation {
+    0% {
+      background-position: 100% 0;
+    }
+    50% {
+      background-position: 0 100%;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
+  /* Apply the gradient background and animation to the Fab */
+  .gradient-fab {
+    background: linear-gradient(90deg, #dceced, #c271e5);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
+  }

@@ -13,3 +13,23 @@ a {
 .image-hover-effect:hover {
   transform: scale(1.2);
 }
+
+.gradient-text {
+  font-size: 4rem; /* Adjust the size of the text */
+  font-weight: bold; /* Optional: makes the text bolder */
+  background: linear-gradient(180deg, #ffffff, #000000); /* Gradient from top to bottom */
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text; /* For other browsers */
+  color: transparent; /* Makes the text transparent, so the gradient shows through */
+}
+
+
+
+/* for diagonal background */
+.clip-path-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+.clip-path-diagonal-reverse {
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+}

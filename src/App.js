@@ -5,6 +5,7 @@ import HomePage from './Homepage';
 import Test from './Test';
 import theme from './Theme';
 import { ThemeProvider } from '@mui/material';
+import SpecialFlag from './SpecialFlag';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/home' element={<HomePage />} />
           <Route path='/' element={<Test />} />
+          <Route path='/sf' element={<SpecialFlag />} />
         </Routes>
       </Router>
     </ThemeProvider>

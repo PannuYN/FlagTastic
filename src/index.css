@@ -25,10 +25,3 @@ body {
   animation: pageFadeIn 1s ease-out forwards;
 }
 
-/* allow scrolling although scrollbar is hidden */
-body {
-  scrollbar-width: none;  /* for Firefox */
-}
-body::-webkit-scrollbar {
-  display: none;  /* for Webkit-based browsers (Chrome, Safari, Edge) */
-}
