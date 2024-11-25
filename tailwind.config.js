@@ -1,15 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  important: "#root",
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        geist: ['Geist Mono', 'monospace']
+      }
+    },
   },
   plugins: [],
-  corePlugins: {
-    transform: true, // Ensure transform utilities are enabled
-  },
-}
+};

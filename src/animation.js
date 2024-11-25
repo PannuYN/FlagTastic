@@ -1,6 +1,7 @@
 import { keyframes } from '@emotion/react'; // If using Emotion for styling
 
-// Keyframes for the bounce (up-and-down) animation
+//animation for down arrow icon in homepage
+// Keyframes for the bounce (up-and-down) animation (there is tailwind class for this animation)
 export const bounceAnimation = keyframes`
   0%, 100% {
     transform: translateY(0);
@@ -9,11 +10,10 @@ export const bounceAnimation = keyframes`
     transform: translateY(10px);
   }
 `;
-
 // Keyframes for the color animation
 export const colorAnimation = keyframes`
   0% {
-    color: #ff0000; // Red
+    color: #ff0000; // Yellow
   }
   30% {
     color: #ffff00; // Blue
@@ -22,10 +22,9 @@ export const colorAnimation = keyframes`
     color: #ff00ff; // Magenta
   }
   100% {
-    color: #ff0000; // Back to Red
+    color: #ff0000; // Back to Yellow
   }
 `;
-
 // Keyframes for opacity animation (fade in and out)
 export const opacityAnimation = keyframes`
   0%, 100% {
@@ -35,3 +34,4 @@ export const opacityAnimation = keyframes`
     opacity: 0.5;
   }
 `;
+//animation for down arrow icon in homepage ends here

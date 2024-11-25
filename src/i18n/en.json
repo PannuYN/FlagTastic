@@ -19,9 +19,20 @@
 
   "more": "Tell me more",
   "origin-title": "Origin",
+  "facts": "Facts",
+  "quick-and-fun": "Quick and Fun",
 
-  "switzerland": "SWITZERLAND",
-  "switzerland-title": "Discover the Beauty of Switzerland",
-  "switzerland-paragraph": "Switzerland is renowned for its breathtaking Alpine landscapes, pristine lakes, and charming villages. It is a hub for outdoor activities, offering year-round adventures from skiing in the winter to hiking and exploring nature trails in the summer. The country is also celebrated for its cultural diversity, delicious Swiss chocolates, and historical landmarks that beautifully merge tradition and modernity.",
-  "switzerland-origin": "The Swiss flag, a bold white cross on a red background, is one of the oldest national symbols still in use. Its origins date back to the 14th century, when Swiss soldiers carried a white cross as a sign of unity and shared purpose during the Battle of Laupen in 1339. Officially adopted in 1889, the flag symbolizes the historic struggle for freedom and the confederation's commitment to neutrality. The red field and white cross are thought to represent courage and peace, respectively. This enduring emblem reflects Switzerland's rich heritage and steadfast principles throughout history."
+  "switzerland": {
+    "name": "SWITZERLAND",
+    "title": "Discover the Beauty of Switzerland",
+    "paragraph": "Switzerland is renowned for its breathtaking Alpine landscapes, pristine lakes, and charming villages. It is a hub for outdoor activities, offering year-round adventures from skiing in the winter to hiking and exploring nature trails in the summer. The country is also celebrated for its cultural diversity, delicious Swiss chocolates, and historical landmarks that beautifully merge tradition and modernity.",
+    "origin": "The Swiss flag, a bold white cross on a red background, is one of the oldest national symbols still in use. Its origins date back to the 14th century, when Swiss soldiers carried a white cross as a sign of unity and shared purpose during the Battle of Laupen in 1339. Officially adopted in 1889, the flag symbolizes the historic struggle for freedom and the confederation's commitment to neutrality. The red field and white cross are thought to represent courage and peace, respectively. This enduring emblem reflects Switzerland's rich heritage and steadfast principles throughout history.",   
+    "capital": "Bern",
+    "capital-paragraph": "Bern is the capital of Switzerland.",
+    "language": "Official languages",
+    "officialLanguage": "German, French, Italian, Romansh",
+    "currency": "Swiss Franc (CHF)",
+    "population": "8.7 million (approx.)"
+  }
+
 }
